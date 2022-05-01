@@ -1,3 +1,15 @@
+## About this project
+
+My goal is to build a simple UI to work with laravel queued jobs, in this interface the user will be able to interact with queued jobs.
+
+Built with:
+
+Laravel
+VueJS
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
