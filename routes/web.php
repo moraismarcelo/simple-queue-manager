@@ -39,6 +39,8 @@ Route::middleware([
 });
 
 
+//Use this route to insert dummy data do jobs' table for testing purposes
+
 Route::get('insert-job-in-queue', function () {
     \App\Jobs\LogInfoJob::dispatch();
     return 'Job has been inserted in queue';
