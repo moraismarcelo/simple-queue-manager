@@ -5,6 +5,7 @@ My goal is to build a simple UI to work with laravel queued jobs, in this interf
 Built with:
 
 Laravel
+InertiaJS
 VueJS
 
 
