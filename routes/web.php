@@ -35,6 +35,7 @@ Route::middleware([
     })->name('dashboard');
 
     Route::get('/dashboard/queue', [QueueController::class, 'index'])->name('dashboard.queue.index');
+    Route::post('/dashboard/queue/run-job', [QueueController::class, 'runJob'])->name('dashboard.queue.run-job');
 
 });
 
