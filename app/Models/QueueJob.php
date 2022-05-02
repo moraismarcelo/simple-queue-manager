@@ -9,6 +9,8 @@ class QueueJob extends Model
 {
     use HasFactory;
 
+    const UPDATED_AT = null;
+
     protected $table= 'jobs';
 
     protected $fillable = [
