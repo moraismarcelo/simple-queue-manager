@@ -5,6 +5,7 @@ import { Icon } from '@iconify/vue';
 import { ref } from '@vue/reactivity';
 import { onMounted } from '@vue/runtime-core';
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import SweetAlert from 'sweetalert2';
 
 const queues =  defineProps([])
 
@@ -14,7 +15,17 @@ const isLoading = ref(false);
 
 onMounted(() => {
     getJobs()
+
 });
+
+function showAlert(title, text, icon){
+    SweetAlert.fire({
+        title: title,
+        text: text,
+        icon: icon,
+        confirmButtonText: 'Close',
+    })
+}
 
 function getJobs(){
     isLoading.value = true;
@@ -31,7 +42,10 @@ function runJob(jobId){
     }).then(response => {
         getJobs();
         isLoading.value = false;
+        showAlert('Success', 'Job added to queue and will be run asap!', 'success');
     }).catch(error => {
+        isLoading.value = false;
+        showAlert('Error', 'Job has not been run, please check logs for more details', 'error');
         console.log(error);
     });
 }

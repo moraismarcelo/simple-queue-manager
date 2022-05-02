@@ -14,7 +14,8 @@ createInertiaApp({
     resolve: (name) => require(`./Pages/${name}.vue`),
     setup({ el, app, props, plugin }) {
         return createApp({ render: () => h(app, props) })
-            .use(plugin, VueSweetalert2)
+            .use(plugin)
+            .use(VueSweetalert2)
             .mixin({ methods: { route } })
             .mount(el);
     },
